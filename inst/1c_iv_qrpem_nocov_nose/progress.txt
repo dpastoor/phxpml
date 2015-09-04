@@ -1,0 +1,22 @@
+(nSubj = 24)
+(nObs = 399)
+(Iteration = 1
+	(LL = 0)
+	(tvV = 50)
+	(tvCl = 5)
+	)
+(Iteration = 2
+	(LL = -473.882)
+	(tvV = 49.2312)
+	(tvCl = 4.85402)
+	)
+(Iteration = 3
+	(LL = -439.933)
+	(tvV = 49.2081)
+	(tvCl = 4.82722)
+	)
+(Iteration = 4
+	(LL = -439.707)
+	(tvV = 49.233)
+	(tvCl = 4.82178)
+	)

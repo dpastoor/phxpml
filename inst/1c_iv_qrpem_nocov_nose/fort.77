@@ -1,0 +1,38 @@
+    24  NSUB
+     3  NUMTHETA
+     2  NUMETA  
+     1  NUMEPS  
+     3  IDENGINE
+     1  IFLAGFOCEHESS
+     1  NORDERAGQ
+     1  NUMPROCS 
+     1  METHODblup 
+    13  NDIGITblup 
+     1  METHODlagl 
+     7  NDIGITlagl 
+  0.49244905E+02        1   1 THETA        BOUNDS:  -0.100+101  0.100+101
+  0.48202651E+01        2   1 THETA        BOUNDS:  -0.100+101  0.100+101
+  0.10173086E+00        1   1 EPS_STD_DEV  BOUNDS:   0.100E-02  0.100+101
+  0.10349168E-01        1   1 EPS_VARIANCE
+  0.85582962E-01        1   1 OMEGA
+  0.34490997E-01        2   1 OMEGA
+  0.11380884E+00        2   2 OMEGA
+  0.43908906E+03        1   1 -LOGLIKE
+  0.14486517E+03        1   1 ELSOBJ  
+
+
+
+  No std error computation requested
+
+
+  engine runtime (secs) =           0.234
+  stderr runtime (secs) =           0.000
+
+ Convergence status
+ -LL at last blup =          439.08910
+ -LL final linmix =          439.08906
+ gap =                         0.00004
+
+ number of observations =    399
+ iterations =    4 of max iterations =10000
+ iflagiexp = 1
