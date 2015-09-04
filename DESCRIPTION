@@ -1,0 +1,12 @@
+Package: phxpml
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1
+Date: 2015-09-04
+Authors@R: c(
+person("Devin", "Pastoor", "devin.pastoor@gmail.com", c("aut", "cre"))
+)
+Maintainer: Devin Pastoor <devin.pastoor@gmail.com>
+Description: Utility functions in R for command line phoenix nlme
+License: MIT + file license
+LazyData: TRUE
