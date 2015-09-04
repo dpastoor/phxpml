@@ -9,4 +9,12 @@ person("Devin", "Pastoor", "devin.pastoor@gmail.com", c("aut", "cre"))
 Maintainer: Devin Pastoor <devin.pastoor@gmail.com>
 Description: Utility functions in R for command line phoenix nlme
 License: MIT + file license
-LazyData: TRUE
+LazyData: yes
+Depends:
+    R (>= 3.1.2)
+Imports:
+    magrittr,
+    jsonlite,
+    dplyr
+BugReports: https://github.com/dpastoor/phxpml
+VignetteBuilder: knitr
