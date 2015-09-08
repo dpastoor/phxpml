@@ -2,6 +2,7 @@
 % Please edit documentation in R/run_summaries.R
 \name{get_model_summary}
 \alias{get_model_summary}
+\title{get the parsed yml from the model file}
 \usage{
 get_model_summary(mdl, dir)
 }
@@ -9,5 +10,8 @@ get_model_summary(mdl, dir)
 \item{mdl}{model file}
 
 \item{dir}{directory of model file}
+}
+\description{
+get the parsed yml from the model file
 }
 

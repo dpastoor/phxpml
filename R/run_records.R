@@ -12,6 +12,7 @@ get_last_model_dir <- function(dir_list, models) {
 # result <- c(theo001 = "theo001_est_10", theo002 = "theo002_est_3")
 # all.equal(get_last_model_dir(dir_list, models),result)
 
+#' get all runs and associated recent results folder
 #' @param dir directory to search
 #' @param recursive boolean
 #' @param filter vector of run names to filter

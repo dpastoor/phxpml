@@ -2,10 +2,14 @@
 % Please edit documentation in R/run_summaries.R
 \name{get_dmp_summary}
 \alias{get_dmp_summary}
+\title{get summary of key information from dmp.txt file for a given directory}
 \usage{
 get_dmp_summary(dir)
 }
 \arguments{
 \item{dir}{directory of dmp.txt file}
+}
+\description{
+get summary of key information from dmp.txt file for a given directory
 }
 

@@ -2,6 +2,7 @@
 % Please edit documentation in R/run_records.R
 \name{get_run_records}
 \alias{get_run_records}
+\title{get all runs and associated recent results folder}
 \usage{
 get_run_records(dir = getwd(), recursive = F, filter = NULL)
 }
@@ -14,5 +15,8 @@ get_run_records(dir = getwd(), recursive = F, filter = NULL)
 }
 \value{
 list of dir, yml_models, model_dirs, and time of scan
+}
+\description{
+get all runs and associated recent results folder
 }
 

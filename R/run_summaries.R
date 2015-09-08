@@ -1,3 +1,4 @@
+#' get summary of key information from dmp.txt file for a given directory
 #' @param dir directory of dmp.txt file
 #' @export
 get_dmp_summary <- function(dir) {
@@ -12,6 +13,7 @@ get_dmp_summary <- function(dir) {
     return(key_runsum)
 }
 
+#' get the parsed yml from the model file
 #' @param mdl model file
 #' @param dir directory of model file
 #' @export
