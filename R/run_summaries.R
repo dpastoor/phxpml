@@ -1,8 +1,8 @@
 #' get summary of key information from dmp.txt file for a given directory
 #' @param dir directory of dmp.txt file
 #' @export
-get_dmp_summary <- function(dir) {
-    runsum <- source(paste0(normalizePath(dir), "dmp.txt"))$value
+get_dmp_summary <- function(dir = getwd()) {
+    runsum <- source(file.path(normalizePath(dir), "dmp.txt"))$value
     attributes(runsum)$class <- NULL
     key_runsum <- list(fixed = runsum$coefficients$fixed,
                        logLik = runsum$logLik,
