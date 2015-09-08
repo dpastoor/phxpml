@@ -17,6 +17,6 @@ get_dmp_summary <- function(dir) {
 #' @param mdl model file
 #' @param dir directory of model file
 #' @export
-get_model_summary <- function(mdl, dir) {
-    return(yaml::yaml.load_file(paste0(normalizePath(dir),mdl)))
+get_model_summary <- function(mdl, dir = getwd()) {
+    return(yaml::yaml.load_file(file.path(normalizePath(dir),mdl)))
 }
