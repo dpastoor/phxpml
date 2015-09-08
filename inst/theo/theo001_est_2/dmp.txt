@@ -1,0 +1,69 @@
+dmp.txt <- structure(
+	.Data = list(
+		"coefficients" = list(
+			"fixed" = c("tvKa" = 2.53115, "tvV" = 0.474938, "tvCl" = 0.0391891, "tvTlag" = 0.157874, "CEps" = 0.545202)
+			, "random" = list("Subject" = matrix(
+				as.numeric(c(
+					 -0.268032,  0.00146775,  0.0374377
+					,  -0.0543233,  0.0542312,  0.115132
+					,  0.120379,  0.0822089,  -0.179943
+					,  -0.0690829,  0.20959,  -0.0492006
+					,  -0.578594,  0.0430466,  0.03375
+					,  -0.0923701,  0.0967097,  0.222784
+					,  0.228096,  0.153682,  -0.276077
+					,  -0.165582,  0.382485,  -0.0481994
+					,  0.0290293,  0.384005,  0.558623
+					,  -0.382869,  -0.130399,  -0.402419
+					,  -0.99254,  -0.263886,  1.84526
+					,  -1.09391,  1.19399,  -0.628331
+					))
+				, nrow = 12, ncol = 3
+				, dimnames = list(
+					c()
+					, as.character(c("nV", "nCl", "nKa"))
+					)
+				))
+			)
+		, "logLik" = c(-151.707)
+		, "nObs" = c(132)
+		, "nSubj" = c(12)
+		, "nParm" = c(9)
+		, "returnCode" = c(1)
+		, "omega" = matrix(
+			as.numeric(c(0.0174955, 0.0317859, 0, 0.0317859, 0.0645278, 0, 0, 0, 0.712523))
+			, nrow = 3, ncol = 3
+			, dimnames = list(
+				as.character(c("nV", "nCl", "nKa"))
+				, as.character(c("nV", "nCl", "nKa"))
+				)
+			)
+		, "eta" = matrix(
+			as.numeric(c(-1.12275e-005, -2.23945e-005, 0.00971272, 0.0164285, 0.0610984, 0.688465, 0.128174, 0.247181, 0.829738, 0.0309717, 0.0269359, 0.0170273))
+			, nrow = 3, ncol = 4
+			, dimnames = list(
+				as.character(c("nV", "nCl", "nKa"))
+				, as.character(c("mean", "var", "sd", "shrinkage"))
+				)
+			)
+		, "sigma" = matrix(
+			as.numeric(c(0.297245))
+			, nrow = 1, ncol = 1
+			, dimnames = list(
+				as.character(c("CEps"))
+				, as.character(c("CEps"))
+				)
+			)
+		, "method" = "ML"
+		, "C:\\Users\\devin\\AppData\\Local\\Temp\\tmpq8_s8yok" = as.character(c(
+			  "id(\"xid\")"
+			, "time(\"time\")"
+			, "dose(Aa<-\"dose\")"
+			, "covr(wt<-\"wt\")"
+			, "obs(CObs<-\"yobs\")"
+			, ""
+			, "table(file=\"test1.csv\")"
+			))
+		)
+	, names = c("coefficients", "logLik", "nObs", "nSubj", "nParm", "returnCode", "omega", "eta", "sigma", "method", "C:\\Users\\devin\\AppData\\Local\\Temp\\tmpq8_s8yok")
+	, class = "nlme"
+	)

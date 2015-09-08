@@ -1,0 +1,50 @@
+notes:
+  basedon:
+  description: base model
+  author: Devin
+coldef: |
+  id("xid")
+  time("time")
+  dose(Aa<-"dose")
+  covr(wt<-"wt")
+  obs(CObs<-"yobs")
+data:
+  file: data.csv
+estimation:
+  iterations: 10000
+  method: 3
+tables:
+  - file: test1.csv
+    times: []
+source: |
+  test() {
+    covariate(wt)
+
+    cfMicro(A1, Cl / V, first = (Aa = Ka))
+    C = A1 / V
+
+    dosepoint(Aa, tlag = Tlag)
+
+    error(CEps = 0.1)
+    observe(CObs = C + CEps)
+
+    stparm(
+      Ka = tvKa * exp(nKa)
+      V = tvV * exp(nV)
+      Cl = tvCl * exp(nCl)
+      Tlag = tvTlag
+    )
+
+
+    fixef(
+      tvKa = c(, 1.56812, )
+      tvV = c(, 0.456871, )
+      tvCl = c(, 0.0402084, )
+      tvTlag = c(, 1, )
+    )
+
+    ranef(
+      block(nV, nCl) = c(0.01523822, 0, 0.062068663),
+      diag(nKa) = c(0.421573)
+    )
+  }
