@@ -21,7 +21,7 @@ get_run_records <- function(dir = getwd(),
                             recursive = F,
                             filter= NULL) {
     dir <- normalizePath(dir)
-    yml_list <- list_files_with_exts(dir,
+    yml_list <- tools::list_files_with_exts(dir,
                                      exts = c("yaml", "yml"),
                                      full.names = F)
     dir_list <- list.dirs(dir, full.names=F)
