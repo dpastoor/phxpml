@@ -13,8 +13,9 @@ LazyData: yes
 Depends:
     R (>= 3.1.2)
 Imports:
-    magrittr,
+    dplyr,
     jsonlite,
-    dplyr
+    magrittr,
+    yaml
 BugReports: https://github.com/dpastoor/phxpml
 VignetteBuilder: knitr
