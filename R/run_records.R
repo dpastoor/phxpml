@@ -23,10 +23,10 @@ get_run_records <- function(dir = getwd(),
                             filter= NULL) {
     dir <- normalizePath(dir)
     yml_list <- tools::list_files_with_exts(dir,
-                                     exts = c("yaml", "yml"),
+                                     exts = c("yaml", "yml", "mdl"),
                                      full.names = F)
     dir_list <- list.dirs(dir, full.names=F)
-    models <- gsub("\\.yml|\\.yaml", "", yml_list)
+    models <- gsub("\\.yml|\\.yaml|\\.mdl", "", yml_list)
     last_model_dirs <- get_last_model_dir(dir_list, models)
 
     result_list <- list(
