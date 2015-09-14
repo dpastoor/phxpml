@@ -16,6 +16,8 @@ Imports:
     dplyr,
     jsonlite,
     magrittr,
+    readr,
+    tidyr,
     yaml
 BugReports: https://github.com/dpastoor/phxpml
 VignetteBuilder: knitr
