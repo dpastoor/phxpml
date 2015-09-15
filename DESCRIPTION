@@ -16,7 +16,7 @@ Imports:
     dplyr,
     jsonlite,
     magrittr,
-    readr,
+    readr (>= 0.1.1),
     stringi,
     tidyr,
     yaml
