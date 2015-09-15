@@ -87,10 +87,22 @@ process_files <- function() {
 
 #' create a pmldb instance
 #' @param dir directory containing files of interest
+#' @param savedb save created list as a .rds file in the output dir
+#' @param invalidate overwrite existing .rds db file if it exists
 #' @export
-create_pmldb <- function(dir) {
+create_pmldb <- function(dir,
+                         savedb = TRUE,
+                         invalidate = FALSE
+                         ) {
 
     dir <- normalizePath(dir)
+    db_name <- paste0(basename(dir), ".rds")
+
+    if (file.exists(normalize_file(dir, db_name)) && !invalidate) {
+        message(paste0("found cached database file: ", db_name))
+        return(readRDS(normalize_file(dir, db_name)))
+    }
+
     file_processing <- process_files()
 
     init_db <- list(
@@ -119,5 +131,13 @@ create_pmldb <- function(dir) {
     }
 
     attr(init_db, "class") <- "pmldb"
+
+    if(savedb) {
+        message(paste0("saving rds db as: ", db_name))
+        saveRDS(init_db, normalize_file(dir, db_name))
+    }
     return(init_db)
 }
+
+pmldb <- create_pmldb(dir)
+
