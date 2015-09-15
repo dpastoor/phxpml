@@ -17,6 +17,7 @@ Imports:
     jsonlite,
     magrittr,
     readr,
+    stringi,
     tidyr,
     yaml
 BugReports: https://github.com/dpastoor/phxpml
