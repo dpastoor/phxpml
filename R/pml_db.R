@@ -138,6 +138,3 @@ create_pmldb <- function(dir,
     }
     return(init_db)
 }
-
-pmldb <- create_pmldb(dir)
-
