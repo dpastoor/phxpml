@@ -1,0 +1,40 @@
+---
+coldef:
+  id("ID")
+  time("TIME")
+  dose(Aa<-"AMT")
+  covr(WT<-"WT")
+  obs(CObs<-"DV")
+data:
+  file: dapa_oral_processed.txt
+estimation:
+  iterations: 10000
+  method: 5
+  stderr: 1
+tables: []
+---
+test(){
+  deriv(Aa = - Ka * Aa)
+  deriv(A1 = Ka * Aa - Cl * C)
+  dosepoint(Aa)
+  C = A1 / V
+  error(CEps = 0.1)
+  observe(CObs = C * (1 + CEps))
+  stparm(Ka = tvKa  * exp(nKa))
+  stparm(V = tvV  * (WT/70)^dVdWT * exp(nV))
+  stparm(Cl = tvCl * (WT/70)^dCldWT * exp(nCl))
+  fcovariate(WT)
+  fixef(
+    tvKa = c(, 1, )
+    tvV = c(, 50, )
+    tvCl = c(, 4, )
+    dCldWT(freeze) = c(, 0.75, )
+    dVdWT(freeze) = c(, 1, )
+  )
+  ranef(diag(nV, nCl, nKa) = c(0.1, 0.1, 0.1))
+}
+---
+notes:
+  basedon: run003
+  description: base model + allo freeze + add stderr
+  author: Devin
