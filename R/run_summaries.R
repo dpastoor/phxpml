@@ -18,5 +18,12 @@ get_dmp_summary <- function(dir = getwd()) {
 #' @param dir directory of model file
 #' @export
 get_model_summary <- function(mdl, dir = getwd()) {
-    return(yaml::yaml.load_file(file.path(normalizePath(dir),mdl)))
+    file_path <- normalizePath(file.path(dir,mdl))
+    file_docs <- parse_multidoc_yaml(file_path)
+    output_list <- lapply(file_docs, function(x) {
+        yaml::yaml.load(paste(x, collapse = "\n"))
+    })
+    output <- purrr::flatten(output_list)
+    names(output)[names(output)==""] <- "source"
+    return(output)
 }
