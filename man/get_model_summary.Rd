@@ -4,7 +4,7 @@
 \alias{get_model_summary}
 \title{get the parsed yml from the model file}
 \usage{
-get_model_summary(mdl, dir)
+get_model_summary(mdl, dir = getwd())
 }
 \arguments{
 \item{mdl}{model file}

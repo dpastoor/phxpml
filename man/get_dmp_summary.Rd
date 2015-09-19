@@ -4,7 +4,7 @@
 \alias{get_dmp_summary}
 \title{get summary of key information from dmp.txt file for a given directory}
 \usage{
-get_dmp_summary(dir)
+get_dmp_summary(dir = getwd())
 }
 \arguments{
 \item{dir}{directory of dmp.txt file}
