@@ -2,6 +2,7 @@
 % Please edit documentation in R/parse_outtxt.R
 \name{parse_outtxt}
 \alias{parse_outtxt}
+\title{extract key output the out.txt file}
 \usage{
 parse_outtxt(dir, file = "out.txt")
 }
@@ -12,5 +13,8 @@ parse_outtxt(dir, file = "out.txt")
 }
 \value{
 list of residuals and key outputs
+}
+\description{
+extract key output the out.txt file
 }
 

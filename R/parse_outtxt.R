@@ -1,3 +1,4 @@
+#' extract key output the out.txt file
 #' @param dir directory of out.txt file
 #' @param file filename defaults to out.txt
 #' @export
