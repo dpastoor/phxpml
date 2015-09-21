@@ -12,6 +12,9 @@ read_csv_dir <- function(dir, file, ...) {
 #' @export
 process_files <- function() {
     all_files <- list(
+    ConvergenceData = list(filename = "progress.txt",
+                        processing_fun = parse_progress
+                        ),
     dmp      = list(filename = "dmp.txt",
                     processing_fun = function(dir) {
                         return(get_dmp_summary(dir))
@@ -106,6 +109,7 @@ create_pmldb <- function(dir,
     file_processing <- process_files()
 
     init_db <- list(
+        ConvergenceData = NULL,
         dmp = NULL,
         doses = NULL,
         EtaCov = NULL,
