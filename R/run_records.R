@@ -1,6 +1,6 @@
 get_last_model_dir <- function(dir_list, models) {
     results <- vapply(models, function(x, dir_list) {
-        model_runs <- dir_list[grepl(paste0(x, "_"), dir_list)]
+        model_runs <- dir_list[grepl(paste0(x, "_est"), dir_list)]
         est_nums <- as.numeric(gsub(paste0(x, "_", "est_"), "", model_runs))
         return(model_runs[est_nums == max(est_nums)])
     }, character(1), dir_list)
@@ -23,10 +23,10 @@ get_run_records <- function(dir = getwd(),
                             filter= NULL) {
     dir <- normalizePath(dir)
     yml_list <- tools::list_files_with_exts(dir,
-                                     exts = c("yaml", "yml", "mdl"),
+                                     exts = c("mdl", "pml"),
                                      full.names = F)
     dir_list <- list.dirs(dir, full.names=F)
-    models <- gsub("\\.yml|\\.yaml|\\.mdl", "", yml_list)
+    models <- gsub("\\.pml|\\.mdl", "", yml_list)
     last_model_dirs <- get_last_model_dir(dir_list, models)
 
     result_list <- list(

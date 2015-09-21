@@ -2,7 +2,7 @@
 #' @param dir directory of dmp.txt file
 #' @export
 get_dmp_summary <- function(dir = getwd()) {
-    runsum <- source(file.path(normalizePath(dir), "dmp.txt"))$value
+    runsum <- source(normalize_file(dir, "dmp.txt"))$value
     attributes(runsum)$class <- NULL
     key_runsum <- list(fixed = runsum$coefficients$fixed,
                        logLik = runsum$logLik,
@@ -18,7 +18,7 @@ get_dmp_summary <- function(dir = getwd()) {
 #' @param dir directory of model file
 #' @export
 get_model_summary <- function(mdl, dir = getwd()) {
-    file_path <- normalizePath(file.path(dir,mdl))
+    file_path <- normalize_file(dir,mdl)
     file_docs <- parse_multidoc_yaml(file_path)
     output_list <- lapply(file_docs, function(x) {
         yaml::yaml.load(paste(x, collapse = "\n"))
